@@ -1,0 +1,86 @@
+<template>
+	<view class="bg-image" >
+		<view class="text-center flex justify-center" style="padding-top: 100rpx;">
+			<view class="padding-sm bg-white flex justify-center align-center" style="border-radius: 50%;">
+				<text class="iconfont icon-wodeqianbao" style="color: #ff0000;width: 80rpx;height: 80rpx;"></text>
+			</view>
+		</view>
+		<view class="text-center text-xl margin-top-lg text-white">积分钱包</view>
+		<view class="bg-white margin-lr-sm radius margin-top-sm">
+			<view class="text-center" style="padding-top: 80rpx;">积分池<text class="lg cuIcon-right"></text></view>
+			<view class="text-center text-bold text-black margin-top-lg" style="font-size: 60rpx;">{{data.integral||0}}</view>
+			<view class="text-center"><text class="padding-xs" style="color: #ff5838;background-color: #ffeddf;font-size: 25rpx;border-radius: 8rpx;">释放5%成余额</text></view>
+			<view class="flex text-gray" style="margin-top: 100rpx;">
+				<view class="flex-sub text-center" style="border-right: 1rpx solid #e5e5e5;">
+					<view>今日释放</view>
+					<view class="margin-top-lg text-price text-xl text-black text-bold" v-if="data.today>0">{{data.today||0}}</view>
+					<view class="margin-top-lg text-xl" v-else>未释放</view>
+				</view>
+				<view class="flex-sub text-center">
+					<view>昨日释放</view>
+					<view class="margin-top-lg text-price text-xl text-black text-bold" v-if="data.yesterday>0">{{data.yesterday||0}}</view>
+					<view class="margin-top-lg text-xl" v-else>未释放</view>
+				</view>
+			</view>
+			<view class="flex text-gray margin-top-sm" v-if="data.today>0">
+				<view class="flex-sub text-center">
+					<text class="cu-btn round sm">今日释放完成</text>
+				</view>
+				<view class="flex-sub text-center">
+
+				</view>
+			</view>
+			<view style="margin-top: 100rpx;margin-bottom: 100rpx;">
+				<button @click="actionRelease" style="width: 60%;background-color: #ff6a4d;color: #fff;">释放</button>
+				<button @click="$Router.push({name:'member_record_wallet_integral'})" class="margin-top-lg" style="width: 60%;background-color: #ffe5e0;color: #ff6a4d;">明细</button>
+			</view>
+			<view class="padding-tb-lg padding-lr-sm flex justify-between margin-top-lg " style="border-top: 10rpx solid #eeeeee;">
+				<text style="color: #ff6a4d;">了解积分池说明</text>
+				<text class="lg cuIcon-right"></text>
+			</view>
+		</view>
+		<view class="margin-top-xl text-center">
+		</view>
+	</view>
+</template>
+
+<script>
+	export default{
+        data(){
+            return {
+                data: '',
+            }
+        },
+        onLoad(){
+            this.getList()
+        },
+        onShow(){
+            this.getList()
+        },
+        methods:{
+            getList:function () {
+                this.$http.get('member.get_wallet_integral').then((res)=>{
+                    this.data = res.data
+                })
+            },
+            actionRelease:function () {
+                this.$http.get('member.release').then((res)=>{
+                    this.$utils.toast('释放成功')
+					this.getList()
+                })
+            },
+        }
+	}
+</script>
+
+<style lang="scss">
+	.radius{
+		border-radius: 22rpx;
+	}
+	.bg-image{
+		min-height: 100vh;
+		background: url("http://appstore.bai918.com/static/app/images/member_wallet_integral_bg.png");
+		background-size:100% 100%;
+		background-repeat:no-repeat;
+	}
+</style>

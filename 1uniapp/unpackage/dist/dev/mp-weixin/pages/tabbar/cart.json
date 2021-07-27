@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "cart-index": "/pages/cart/index"
+  }
+}

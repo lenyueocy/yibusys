@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "未找到页面",
+  "usingComponents": {
+    "tui-no-data": "/components/thorui/tui-no-data/tui-no-data"
+  }
+}

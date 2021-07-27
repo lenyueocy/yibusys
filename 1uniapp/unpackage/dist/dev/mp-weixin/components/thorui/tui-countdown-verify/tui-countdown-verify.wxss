@@ -1,0 +1,33 @@
+
+.tui-countdown__verify.data-v-6e437c74 {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.tui-verify__opacity.data-v-6e437c74 {
+	opacity: 0.5;
+}
+.tui-verify__line.data-v-6e437c74 {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	-webkit-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	-webkit-transform: scale(0.5, 0.5) translateZ(0);
+	        transform: scale(0.5, 0.5) translateZ(0);
+	box-sizing: border-box;
+	border-style: solid;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+}
+

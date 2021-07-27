@@ -1,0 +1,459 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "tui-(.*)": "@/components/thorui/tui-$1/tui-$1.vue",
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        //"navigationBarBackgroundColor": "#e41f19",
+        "navigationBarBackgroundColor": "#ffffff",
+        "backgroundColorTop": "#5677FC",
+        "backgroundColorBottom": "#999",
+        "navigationBarTitleText": "奋钧智慧照明商城",
+        // #ifndef MP
+        "navigationStyle": "custom",
+        // #endif
+        "app-plus": {
+
+        }
+      }
+    },
+    {
+      "path": "pages/webview/index",
+      "style": {
+        "navigationBarTitleText": "外部链接"
+      }
+    },
+    {
+      "path": "pages/index/search",
+      "style": {
+        "navigationBarTitleText": "搜索"
+      }
+    },
+    {
+      "path": "pages/category/index",
+      "style": {
+        "navigationBarTitleText": "分类"
+      }
+    },
+    {
+      "path": "pages/cart/index",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/kefu/index",
+      "style": {
+        "navigationBarTitleText": "联系客服"
+      }
+    },
+    {
+      "path": "pages/setting/index",
+      "style": {
+        "navigationBarTitleText": "设置"
+      }
+    },
+    {
+      "path": "pages/setting/security",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "账户与安全"
+      }
+    },
+    {
+      "path": "pages/message/index",
+      "style": {
+        "navigationBarTitleText": "消息中心"
+      }
+    },
+    {
+      "path": "pages/message/service",
+      "style": {
+        "navigationBarTitleText": "客服消息"
+      }
+    },
+    {
+      "path": "pages/address/index",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "地址"
+      }
+    },
+    {
+      "path": "pages/address/edit",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "地址管理"
+      }
+    },
+    {
+      "path": "pages/member/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/member/info",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "个人资料"
+      }
+    },
+    {
+      "path": "pages/member/recharge",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "余额充值"
+      }
+    },
+    {
+      "path": "pages/member/withdraw",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "申请提现"
+      }
+    },
+    {
+      "path": "pages/member/integral",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "我的积分"
+      }
+    },
+    {
+      "path": "pages/member/collection",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "我的收藏"
+      }
+    },
+    {
+      "path": "pages/member/wallet/index",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "我的钱包"
+      }
+    },
+    {
+      "path": "pages/member/wallet/integral",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "积分钱包"
+      }
+    },
+    {
+      "path": "pages/member/wallet/import_integral",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "转入"
+      }
+    },
+    {
+      "path": "pages/member/import_integral",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "兑换积分"
+      }
+    },
+    {
+      "path": "pages/member/wallet/bankcard",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "我的银行卡"
+      }
+    },
+    {
+      "path": "pages/member/wallet/add_bankcard",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "添加银行卡"
+      }
+    },
+    {
+      "path": "pages/member/record/balance",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "余额明细"
+      }
+    },
+    {
+      "path": "pages/member/record/integral",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "积分明细"
+      }
+    },
+    {
+      "path": "pages/member/record/wallet_integral",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "积分钱包明细"
+      }
+    },
+    {
+      "path": "pages/member/record/recharge",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "充值记录"
+      }
+    },
+    {
+      "path": "pages/member/record/withdraw",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "提现记录"
+      }
+    },
+    {
+      "path": "pages/member/update_password",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "修改密码"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        //"navigationBarBackgroundColor": "#5677FC",
+        //"backgroundColorTop": "#5677FC",
+        //"backgroundColorBottom": "#ffffff",
+        "navigationBarTitleText": "登录",
+        "app-plus": {
+          "bounce": "vertical"
+        }
+      }
+    },
+    {
+      "path": "pages/login/register",
+      "style": {
+        //"navigationBarBackgroundColor": "#5677FC",
+        //"backgroundColorTop": "#5677FC",
+        //"backgroundColorBottom": "#ffffff",
+        "navigationBarTitleText": "注册",
+        "app-plus": {
+          "bounce": "vertical"
+        }
+      }
+    },
+    {
+      "path": "pages/login/bidding",
+      "style": {
+        "navigationBarTitleText": "修改"
+      }
+    },
+    {
+      "path": "pages/login/forget",
+      "style": {
+        //"navigationBarBackgroundColor": "#5677FC",
+        //"backgroundColorTop": "#5677FC",
+        //"backgroundColorBottom": "#ffffff",
+        "navigationBarTitleText": "修改密码",
+        "app-plus": {
+          "bounce": "vertical"
+        }
+      }
+    },
+    {
+      "path": "pages/order/list",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "我的订单"
+      }
+    },
+    {
+      "path": "pages/order/comment/submit",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "发表评价"
+      }
+    },
+    {
+      "path": "pages/order/pay/index",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "订单支付"
+      }
+    },
+    {
+      "path": "pages/order/pay/result",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "支付结果"
+      }
+    },
+    {
+      "path": "pages/order/detail",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    {
+      "path": "pages/order/express",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "物流信息"
+      }
+    },
+    {
+      "path": "pages/order/refund/index",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "申请售后"
+      }
+    },
+    {
+      "path": "pages/order/refund/list",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "售后列表"
+      }
+    },
+    {
+      "path": "pages/order/refund/detail",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "售后详情"
+      }
+    },
+    {
+      "path": "pages/order/refund/submit",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "申请售后"
+      }
+    },
+    {
+      "path": "pages/order/submit",
+      "requiresAuth": true,
+      "style": {
+        "navigationBarTitleText": "提交订单"
+      }
+    },
+    {
+      "path": "pages/logistics/index",
+      "style": {
+        "navigationBarTitleText": "物流信息"
+      }
+    },
+    {
+      "path": "pages/goods/list",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/goods/comment",
+      "style": {
+        "navigationBarTitleText": "评价"
+      }
+    },
+    {
+      "path": "pages/store/index",
+      "style": {
+        "navigationBarTitleText": "在线预约"
+      }
+    },
+    {
+      "path": "pages/department/index",
+      "style": {
+        "navigationBarTitleText": "在线预约"
+      }
+    },
+    {
+      "path": "pages/public/404",
+      "style": {
+        "navigationBarTitleText": "未找到页面"
+      }
+    },
+    {
+      "path": "pages/goods/detail",
+      "style": {
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black",
+        "backgroundColorTop": "#F7F7F7",
+        "backgroundColorBottom": "#F7F7F7",
+        "navigationBarTitleText": "商品详情 ",
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "vertical"
+        }
+      }
+    },
+    {
+      "path": "pages/member/cropper",
+      "style": {
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "图片裁剪",
+        "titleNView": false,
+        "navigationStyle": "custom",
+        "mp-weixin": {
+          "disableScroll": true
+        },
+        "app-plus": {
+          "bounce": "none"
+        },
+        "mp-alipay": {
+          "allowsBounceVertical": "NO"
+        },
+        "mp-baidu": {
+          "disableScroll": true
+        }
+      }
+    },
+    {
+      "path": "pages/tabbar/cart"
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "奋钧智慧照明商城",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "backgroundColorTop": "#FFFFFF",
+    "app-plus": {
+      "bounce": "none"
+    }
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#ca141d",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/tabbar/index.png",
+        "selectedIconPath": "static/images/tabbar/index_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "static/images/tabbar/category.png",
+        "selectedIconPath": "static/images/tabbar/category_selected.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/tabbar/cart",
+        "iconPath": "static/images/tabbar/cart.png",
+        "selectedIconPath": "static/images/tabbar/cart_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/member/index",
+        "iconPath": "static/images/tabbar/member.png",
+        "selectedIconPath": "static/images/tabbar/member_selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

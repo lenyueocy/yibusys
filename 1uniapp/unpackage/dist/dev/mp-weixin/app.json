@@ -1,0 +1,99 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/webview/index",
+    "pages/index/search",
+    "pages/category/index",
+    "pages/cart/index",
+    "pages/kefu/index",
+    "pages/setting/index",
+    "pages/setting/security",
+    "pages/message/index",
+    "pages/message/service",
+    "pages/address/index",
+    "pages/address/edit",
+    "pages/member/index",
+    "pages/member/info",
+    "pages/member/recharge",
+    "pages/member/withdraw",
+    "pages/member/integral",
+    "pages/member/collection",
+    "pages/member/wallet/index",
+    "pages/member/wallet/integral",
+    "pages/member/wallet/import_integral",
+    "pages/member/import_integral",
+    "pages/member/wallet/bankcard",
+    "pages/member/wallet/add_bankcard",
+    "pages/member/record/balance",
+    "pages/member/record/integral",
+    "pages/member/record/wallet_integral",
+    "pages/member/record/recharge",
+    "pages/member/record/withdraw",
+    "pages/member/update_password",
+    "pages/login/login",
+    "pages/login/register",
+    "pages/login/bidding",
+    "pages/login/forget",
+    "pages/order/list",
+    "pages/order/comment/submit",
+    "pages/order/pay/index",
+    "pages/order/pay/result",
+    "pages/order/detail",
+    "pages/order/express",
+    "pages/order/refund/index",
+    "pages/order/refund/list",
+    "pages/order/refund/detail",
+    "pages/order/refund/submit",
+    "pages/order/submit",
+    "pages/logistics/index",
+    "pages/goods/list",
+    "pages/goods/comment",
+    "pages/store/index",
+    "pages/department/index",
+    "pages/public/404",
+    "pages/goods/detail",
+    "pages/member/cropper",
+    "pages/tabbar/cart"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "奋钧智慧照明商城",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "backgroundColorTop": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#ca141d",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/tabbar/index.png",
+        "selectedIconPath": "static/images/tabbar/index_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "static/images/tabbar/category.png",
+        "selectedIconPath": "static/images/tabbar/category_selected.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/tabbar/cart",
+        "iconPath": "static/images/tabbar/cart.png",
+        "selectedIconPath": "static/images/tabbar/cart_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/member/index",
+        "iconPath": "static/images/tabbar/member.png",
+        "selectedIconPath": "static/images/tabbar/member_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

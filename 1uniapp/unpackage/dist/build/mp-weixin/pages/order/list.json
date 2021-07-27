@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "tui-tabs": "/components/thorui/tui-tabs/tui-tabs",
+    "u-modal": "/node-modules/uview-ui/components/u-modal/u-modal",
+    "order-list-item": "/pages/order/list-item"
+  }
+}

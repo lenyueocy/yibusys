@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "修改",
+  "usingComponents": {
+    "tui-list-cell": "/components/thorui/tui-list-cell/tui-list-cell",
+    "tui-icon": "/components/thorui/tui-icon/tui-icon",
+    "tui-countdown-verify": "/components/thorui/tui-countdown-verify/tui-countdown-verify",
+    "tui-button": "/components/thorui/tui-button/tui-button"
+  }
+}

@@ -1,0 +1,34 @@
+{template 'platform/_header'}
+
+
+<div class="page-header">当前位置：<span class="text-primary"><a href="{url 'platform/reply' array('m' => 'special')}">非文字自动回复</a></span> <span>编辑</span></div>
+
+<style>
+    .tab-content>.tab-pane {margin-top: 10px;}
+    .tab-content>.tab-pane>.fui-list-group {border-bottom: 0;}
+</style>
+
+<div class="page-content ">
+	<div class="new-keyword">
+ 
+		<div class="we7-form" id="special-reply" ng-controller="PostCtrl">
+			<form id="reply-form" class="we7-form form "  class=""   action="{php echo weburl('platform/reply/post', array('ms' => $m, 'rid' => $rid))}" method="post" enctype="multipart/form-data">
+			<div id="key">
+				{php echo module_build_form('core', $rule_id, array('keyword' => false, 'module' => false))}
+			</div>
+			<input type="submit" name="submit"  value="保存" class="btn btn-primary" style="padding: 6px 50px;"/>
+			<input type="hidden" name="token" value="{$_W['token']}">
+			<input type="hidden" name="ms" value="{$m}">
+			<input type="hidden" name="type" value="{$type}">
+		</form>
+		</div>
+	</div>
+<script>
+	angular.module('replyFormApp').value('config', {
+		'url' : '{php echo weburl('platform/reply/change_status')}',
+		'status' : '{$setting[$type]['type']}'
+	});
+	angular.bootstrap($('#special-reply'), ['replyFormApp']);
+</script>
+</div>
+{template '_footer'}

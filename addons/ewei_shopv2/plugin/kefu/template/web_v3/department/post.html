@@ -1,0 +1,98 @@
+{template '_header'}
+
+
+<div class="page-header">
+	当前位置：<span class="text-primary">{if !empty($item['id'])}编辑{else}添加{/if}医生 <small>{if !empty($item['id'])}修改【{$item['name']}】{/if}</small></span>
+</div>
+
+<div class="page-content">
+    {ifp 'doctor.add'}
+    <div class="page-sub-toolbar">
+        <a class="btn btn-primary btn-sm" href="{php echo webUrl('doctor/department/add')}">添加科室</a>
+    </div>
+    {/if}
+    <form {ife 'doctor.add' $item}action="" method="post"{/if} class="form-horizontal form-validate" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$item['id']}" />
+
+            <div class="form-group">
+                <label class="col-lg control-label must">科室名称</label>
+                <div class="col-sm-9 col-xs-12">
+                    {ife 'doctor.index' $item}
+                    <input type="text" name="name" class="form-control" value="{$item['name']}" data-rule-required='true'/>
+                    {else}
+                    <div class='form-control-static'>{$item['name']}</div>
+                    {/if}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-lg control-label must">科室LOGO</label>
+                <div class="col-sm-9 col-xs-12">
+                    {ife 'doctor' $item}
+                    {php echo tpl_form_field_image('logo',$item['logo'])}
+                    {else}
+                    {if !empty($item['logo'])}
+                    <a href='{php echo tomedia($item[' logo'])}' target='_blank'>
+                    <img src="{php echo tomedia($item['logo'])}" style='width:100px;border:1px solid #ccc;padding:1px'/>
+                    </a>
+                    {/if}
+                    {/if}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-lg control-label">状态</label>
+                <div class="col-sm-9 col-xs-12">
+                         {ife 'doctor' $item}
+                    <label class='radio-inline'>
+                        <input type='radio' name='status' value="1" {if $item['status']==1}checked{/if} /> 启用
+                    </label>
+                    <label class='radio-inline'>
+                        <input type='radio' name='status' value="0" {if $item['status']==0}checked{/if} /> 禁用
+                    </label>
+                         {else}
+                          <div class='form-control-static'>{if $item['status']==1}启用{else}禁用{/if}</div>
+                         {/if}
+                </div>
+            </div>
+                
+           <div class="form-group"></div>
+            <div class="form-group">
+                    <label class="col-lg control-label"></label>
+                    <div class="col-sm-9 col-xs-12">
+                           {ife 'doctor' $item}
+                            <input type="submit" value="提交" class="btn btn-primary"  />
+                            
+                        {/if}
+                       <input type="button" name="back" onclick='history.back()' value="返回列表" class="btn btn-default" />
+                    </div>
+            </div>
+    </form>
+</div>
+
+<script language='javascript'>
+
+    $(document).ready(function () {
+        $('#openid_text').focusout(function () {
+            return false;
+        })
+    })
+
+    function search_users() {
+        $("#module-menus1").html("正在搜索....")
+        $.get('{php echo webUrl("store/perm/role/query")}', {
+            keyword: $.trim($('#search-kwd1').val())
+        }, function(dat){
+            $('#module-menus1').html(dat);
+        });
+    }
+
+    function select_role(o) {
+        $("#userid").val(o.id);
+        $("#user").val( o.rolename );
+        $(".close2").click();
+    }
+</script>
+ 
+{template '_footer'}
+ 

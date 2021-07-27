@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "添加银行卡",
+  "usingComponents": {
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "uni-combox": "/components/uni-combox/uni-combox"
+  }
+}

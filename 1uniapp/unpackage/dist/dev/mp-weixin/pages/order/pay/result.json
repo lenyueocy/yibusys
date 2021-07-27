@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "支付结果",
+  "usingComponents": {
+    "tui-icon": "/components/thorui/tui-icon/tui-icon",
+    "tui-loadmore": "/components/thorui/tui-loadmore/tui-loadmore",
+    "tui-button": "/components/thorui/tui-button/tui-button"
+  }
+}

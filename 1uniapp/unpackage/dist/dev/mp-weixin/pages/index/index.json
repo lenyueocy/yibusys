@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "backgroundColorTop": "#5677FC",
+  "backgroundColorBottom": "#999",
+  "navigationBarTitleText": "奋钧智慧照明商城",
+  "usingComponents": {
+    "tui-navigation-bar": "/components/thorui/tui-navigation-bar/tui-navigation-bar",
+    "tui-icon": "/components/thorui/tui-icon/tui-icon",
+    "u-gap": "/node-modules/uview-ui/components/u-gap/u-gap",
+    "u-swiper": "/node-modules/uview-ui/components/u-swiper/u-swiper",
+    "u-skeleton": "/node-modules/uview-ui/components/u-skeleton/u-skeleton"
+  }
+}

@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+#    Header always set Access-Control-Allow-Origin "*"
+     Header always set Access-Control-Allow-Headers: "Authorization, X-Requested-With, Content-Type, Origin, Accept, Client-Security-Token, Accept-Encoding, Access-Token, token"
+#    Header always set Access-Control-Allow-Headers: "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding, Access-Token, token"
+#    Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+#    RewriteEngine On
+#    RewriteCond %{REQUEST_METHOD} OPTIONS
+#    RewriteRule ^(.*)$ $1 [R=200,L]
+#
+#    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteCond %{REQUEST_FILENAME} !-f
+#    RewriteRule . index.php
+    SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /h5/index.html [L]
+</IfModule>
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule /merch/(.*)$ /merch/index.html [L]
+#RewriteRule /coach/(.*)$ /coach/index.html [L]
+#RewriteRule /h5/(.*)$ /h5/index.html [L]
+
+#RewriteRule ^(.*)$ /merch/index.html [L]

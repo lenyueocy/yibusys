@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "登录",
+  "usingComponents": {
+    "tui-button": "/components/thorui/tui-button/tui-button",
+    "tui-list-cell": "/components/thorui/tui-list-cell/tui-list-cell",
+    "tui-icon": "/components/thorui/tui-icon/tui-icon",
+    "tui-bottom-popup": "/components/thorui/tui-bottom-popup/tui-bottom-popup"
+  }
+}

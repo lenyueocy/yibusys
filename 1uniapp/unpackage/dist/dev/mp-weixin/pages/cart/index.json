@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "tui-button": "/components/thorui/tui-button/tui-button",
+    "tui-swipe-action": "/components/thorui/tui-swipe-action/tui-swipe-action",
+    "tui-icon": "/components/thorui/tui-icon/tui-icon",
+    "tui-numberbox": "/components/thorui/tui-numberbox/tui-numberbox",
+    "tui-no-data": "/components/thorui/tui-no-data/tui-no-data",
+    "tui-divider": "/components/thorui/tui-divider/tui-divider",
+    "tui-loadmore": "/components/thorui/tui-loadmore/tui-loadmore"
+  }
+}
